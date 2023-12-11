@@ -4,8 +4,12 @@ import psycopg2
 import os
 
 app = Flask(__name__)
-password = os.environ['POSTGRES_PASSWORD']
 
+if 'POSTGRES_PASSWORD_FILE' in os.environ:
+   with open(os.environ['POSTGRES_PASSWORD_FILE'], 'r') as f:
+       password = f.read().strip()
+else:
+   password = os.environ['POSTGRES_PASSWORD']
 
 @app.route('/')
 def hello_world():
