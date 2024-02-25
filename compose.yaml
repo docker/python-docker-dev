@@ -37,4 +37,9 @@ volumes:
   db-data:
 secrets:
   db-password:
+<<<<<<< HEAD
     file: db/password.txt
+=======
+    file: db/password.txt
+
+>>>>>>> 436194591c65095183c856e63994f8d170218804

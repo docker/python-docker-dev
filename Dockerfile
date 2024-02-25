@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # syntax=docker/dockerfile:1
+=======
+ # syntax=docker/dockerfile:1
+>>>>>>> 436194591c65095183c856e63994f8d170218804
 
 # Comments are provided throughout this file to help you get started.
 # If you need more help, visit the Dockerfile reference guide at
