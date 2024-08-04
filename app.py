@@ -15,7 +15,6 @@ else:
 def hello_world():
     return 'Hello, Docker!'
 
-
 @app.route('/widgets')
 def get_widgets():
     with psycopg2.connect(host="db", user="postgres", password=password, database="example") as conn:
@@ -27,7 +26,6 @@ def get_widgets():
 
     json_data = [dict(zip(row_headers, result)) for result in results]
     return json.dumps(json_data)
-
 
 @app.route('/initdb')
 def db_init():
@@ -45,7 +43,6 @@ def db_init():
     conn.close()
 
     return 'init database'
-
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
